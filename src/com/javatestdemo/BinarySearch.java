@@ -2,25 +2,19 @@ package com.javatestdemo;
 
 public class BinarySearch {
 
-    private double[] arr;
-
-    public BinarySearch(double[] arr) {
-        this.arr = arr;
-    }
-
-    public int find(double x) {
+    public static int find(int x, double[] arr) {
         int i = -1;
-        if (this.arr != null) {
+        if (arr != null) {
             int low = 0;
-            int high = this.arr.length;
+            int high = arr.length;
             int mid;
             while (low < high) {
                 mid = (low + high) / 2;
-                if (x == this.arr[mid]) {
+                if (x == arr[mid]) {
                     i = mid;
                     break;
                 } else {
-                    if (x < this.arr[mid]) {
+                    if (x < arr[mid]) {
                         high = mid;
                     } else {
                         low = mid + 1;
