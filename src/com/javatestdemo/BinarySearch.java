@@ -2,6 +2,10 @@ package com.javatestdemo;
 
 public class BinarySearch {
 
+    private BinarySearch() {
+
+    }
+
     public static int find(int x, double[] arr) {
         int i = -1;
         if (arr != null) {

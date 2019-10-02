@@ -15,14 +15,13 @@ public class BinarySearchTest {
         arr = new double[] {0, 1, 2, 3, 4, 5};
     }
 
-    @AfterEach
-    void tearDown() {
-        arr = new double[] {};
+    @Test
+    void find() {
+        assertEquals(3, BinarySearch.find(3, arr));
     }
 
     @Test
-    void find() {
+    void notFind() {
         assertEquals(-1, BinarySearch.find(-5, arr));
-        assertEquals(3, BinarySearch.find(3, arr));
     }
 }
