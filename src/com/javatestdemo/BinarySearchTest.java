@@ -1,9 +1,8 @@
 package com.javatestdemo;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class BinarySearchTest {
 
@@ -16,11 +15,11 @@ public class BinarySearchTest {
 
     @Test
     void find() {
-        assertEquals(3, BinarySearch.find(3, arr));
+        Assertions.assertEquals(3, BinarySearch.find(3, arr));
     }
 
     @Test
     void notFind() {
-        assertEquals(-1, BinarySearch.find(-5, arr));
+        Assertions.assertEquals(-1, BinarySearch.find(-5, arr));
     }
 }
